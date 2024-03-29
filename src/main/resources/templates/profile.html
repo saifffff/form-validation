@@ -1,0 +1,20 @@
+<!doctype html>
+<html lang="en"
+xmlns="http://www.w3.org/1999/xhtml"
+xmlns:th="http://www.thymeleaf.org"
+>
+<head>
+	<link th:replace="components::bootstrap_css" />
+	<script th:replace="components::bootstrap_js"></script>
+	<meta charset="UTF-8" />
+	<title>Welcome</title>
+</head>
+<body>
+<nav th:replace="components::navbar('Profile')"></nav>
+	<div class="container-fluid" th:object="${userProfile}">
+		<h1>Welcome <span th:text="${userProfile.userName}"></span></h1>
+		<h2>Email : <span th:text="${userProfile.email}"></span></h2>
+	</div>
+	
+</body>
+</html>
